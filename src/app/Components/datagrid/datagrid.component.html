@@ -1,0 +1,19 @@
+<clr-datagrid>
+  <clr-dg-column>Config Name</clr-dg-column>
+  <clr-dg-column>Config Status</clr-dg-column>
+  <clr-dg-column>Date</clr-dg-column>
+  <clr-dg-column>InstallMethod</clr-dg-column>
+  <clr-dg-column>Install ID</clr-dg-column>
+  <clr-dg-column>Nodes</clr-dg-column>
+
+  <clr-dg-row *ngFor="let user of history">
+    <clr-dg-cell>{{user.configName}}</clr-dg-cell>
+    <clr-dg-cell>{{user.configStatus}}</clr-dg-cell>
+    <clr-dg-cell>{{user.date | date: 'medium'}}</clr-dg-cell>
+    <clr-dg-cell>{{user.installMethod}}</clr-dg-cell>
+    <clr-dg-cell>{{user.installId}}</clr-dg-cell>
+    <clr-dg-cell>{{user.nodes}}</clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>{{history.length}} elements</clr-dg-footer>
+</clr-datagrid><br>
